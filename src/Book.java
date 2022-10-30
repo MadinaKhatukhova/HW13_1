@@ -3,6 +3,8 @@ import java.sql.SQLOutput;
 
 public class Book {
     private int Year;
+    private String Book;
+    private int year;
 
     public void main(String[] args) {
         String nameBook = "Book ";
@@ -14,7 +16,28 @@ public class Book {
         }
     public void setYear(int Year) {
         this.Year = Year;
-        }}
+        }
+    public String getNameBook() {
+        return this.Book;
+    }
+    public String getNameAuthor() {
+        return (String) this.Author();
+    }
+
+    private Object Author() {
+
+
+        return null;
+    }
+
+    private Object nameAuthor() {
+        return null;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+}
 
 
 
