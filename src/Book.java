@@ -23,7 +23,11 @@ public class Book {
     public void setYearPublishing(int yearPublishing) {
         this.yearPublishing = yearPublishing;
     }
-}
+
+    public int hashCode() {
+        Object id = null;
+        return java.util.Objects.hash(id);
+}}
 
 
 

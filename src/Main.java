@@ -19,6 +19,47 @@ public class Main {
         Author schildt2 = schildt;
         System.out.println(schildt.equals(schildt2));
 
+        class Book {
+            private final String id;
+            private String name;
+
+            public Book(String id, String name) {
+                this.id = id;
+                this.name = name;
+            }
+
+            public String getId() {
+                return id;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String Name) {
+                this.name = name;
+            }
+
+            public boolean equals(Object other) {
+                if (this.getClass() != other.getClass()) {
+                    return false;
+                }
+                Book schildt2 = (Book) other;
+                return id.equals(schildt2.id);
+            }
+
+
+            public int hashCode() {
+                return java.util.Objects.hash(id);
+            }
+
+
+            public String toString() {
+                return id + ": " + name;
+            }
+
+
+
 
     }
 
@@ -26,6 +67,6 @@ public class Main {
 
 
     }
-    }
+    }}
 
 
