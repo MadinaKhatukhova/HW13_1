@@ -14,6 +14,12 @@ public class Main {
         System.out.println("Название: " + javaBeginnerGuide.getName());
         System.out.println("Автор: " + javaBeginnerGuide.getAuthorName());
         System.out.println("Год: " + javaBeginnerGuide.getYearPublishing());
+
+        System.out.println(sierra);
+        Author schildt2 = schildt;
+        System.out.println(schildt.equals(schildt2));
+
+
     }
 
     {
