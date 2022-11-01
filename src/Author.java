@@ -14,28 +14,25 @@ public class Author {
     public String getLastName() {return lastName;}
     public void setLastName(String lastName) {this.lastName = lastName;}
     public String getFullName() {return fullName;}
-    public void setFullName(String fullName) {this.fullName = fullName;}
-
-        public boolean equals(Object obj) {
+    public void seFullName(String fullName) {this.fullName = fullName;}
+    public boolean equals(Object obj) {
             if (obj == this) {
                 return true;
             }
             if (obj == null || obj.getClass() != this.getClass()) {
                 return false;
             }
-    Author guest = (Author) obj;
-            return firstName == guest.firstName
-                    && (fullName == guest.fullName
-                    || (fullName != null &&fullName.equals(guest.getFullName())))
-                    && (Objects.equals(lastName, guest.lastName)
-                    || (lastName != null && lastName .equals(guest.lastName())));
+        Author guest = (Author) obj;
+        return fullName == guest.fullName
+                && (firstName == guest.firstName
+                || (firstName != null &&firstName.equals(guest.getFirstName())))        && (lastName == guest.lastName
+                || (lastName != null && lastName .equals(guest.getLastName())
+        ));
+
 
     }
 
     private void lastName() {
     }
-    public String getFullName() {
-        return this.fullName;
-    public String toString() {
-        return firstName + ": " + fullName;
-    }}}
+
+      }
