@@ -17,6 +17,7 @@ public class Book {
     public int getYearPublishing() {return yearPublishing;}
     public void setYearPublishing(int yearPublishing) {this.yearPublishing = yearPublishing;}
 
+
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
