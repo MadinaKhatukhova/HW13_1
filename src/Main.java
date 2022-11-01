@@ -1,5 +1,8 @@
+import java.io.UnsupportedEncodingException;
+import java.util.Objects;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         Author sierra = new Author("Kathy","Sierra");
         Book headFirstJava = new Book("Head First Java", sierra, 2010);
         System.out.println("Название: " + headFirstJava.getName());
@@ -16,57 +19,13 @@ public class Main {
         System.out.println("Год: " + javaBeginnerGuide.getYearPublishing());
 
         System.out.println(sierra);
+
+        Author sierra2 = sierra;
+        System.out.println(sierra.equals(sierra2));
         Author schildt2 = schildt;
         System.out.println(schildt.equals(schildt2));
 
-        class Book {
-            private final String id;
-            private String name;
 
-            public Book(String id, String name) {
-                this.id = id;
-                this.name = name;
-            }
-
-            public String getId() {
-                return id;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String Name) {
-                this.name = name;
-            }
-
-            public boolean equals(Object other) {
-                if (this.getClass() != other.getClass()) {
-                    return false;
-                }
-                Book schildt2 = (Book) other;
-                return id.equals(schildt2.id);
-            }
-
-
-            public int hashCode() {
-                return java.util.Objects.hash(id);
-            }
-
-
-            public String toString() {
-                return id + ": " + name;
-            }
-
-
-
-
-    }
-
-    {
-
-
-    }
-    }}
+       } }
 
 
