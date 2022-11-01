@@ -2,11 +2,13 @@ import java.util.Objects;
 
 public class Book {
 
+    private final boolean hashCode;
     private String name;
     private Author fullName;
     private int yearPublishing;
-    public Book(String name, Author fullNameName, int yearPublishing) {
+    public Book(String name, Author fullNameName, boolean hashCode, int yearPublishing) {
         this.name = name;
+        this.hashCode = hashCode;
         this.yearPublishing = yearPublishing;
         this.fullName = fullName;
     }
@@ -16,7 +18,6 @@ public class Book {
     public void setFullName(Author fullName) {this.fullName = fullName;}
     public int getYearPublishing() {return yearPublishing;}
     public void setYearPublishing(int yearPublishing) {this.yearPublishing = yearPublishing;}
-
 
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -33,18 +34,17 @@ public class Book {
                 && (Objects.equals(name, guest.name)
                 || (name != null && name .equals(guest.name())
         ));
+    }
 
+    private String name() {
+        return null;
 
     }
 
-
-    private String name() {
-
-
-        return null;
-    }}
+    public Book(boolean hashCode) {
+        this.hashCode = hashCode;
 
 
-
+}}
 
 

@@ -1,10 +1,11 @@
-import java.util.Objects;
-
 public class Author {
+
+    private final boolean hashCode;
     private String firstName;
     private String lastName;
     private String fullName;
-    public Author(String firstName, String lastName) {
+    public Author(boolean hashCode, String firstName, String lastName) {
+        this.hashCode = hashCode;
         this.firstName = firstName;
         this.lastName = lastName;
         this.fullName = firstName + " " + lastName;
@@ -13,7 +14,8 @@ public class Author {
     public void setFirstName(String firstName) {this.firstName = firstName;}
     public String getLastName() {return lastName;}
     public void setLastName(String lastName) {this.lastName = lastName;}
-    public String getFullName() {return fullName;}
+    public String getFullName() {return fullName;
+    }
     public void seFullName(String fullName) {this.fullName = fullName;}
     public boolean equals(Object obj) {
             if (obj == this) {
@@ -28,11 +30,11 @@ public class Author {
                 || (firstName != null &&firstName.equals(guest.getFirstName())))        && (lastName == guest.lastName
                 || (lastName != null && lastName .equals(guest.getLastName())
         ));
-
-
     }
-
+    public Author(boolean hashCode) {
+        this.hashCode = hashCode;
+    }
     private void lastName() {
     }
 
-      }
+}

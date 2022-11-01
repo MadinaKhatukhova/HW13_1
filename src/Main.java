@@ -1,10 +1,9 @@
 import java.io.UnsupportedEncodingException;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        Author sierra = new Author("Kathy","Sierra");
-        Book headFirstJava = new Book("Head First Java", sierra, 2010);
+        Author sierra = new Author(hashCode, "Kathy","Sierra");
+        Book headFirstJava = new Book("Head First Java", sierra, hashCode, 2010);
         System.out.println("Название: " + headFirstJava.getName());
         System.out.println("Автор: " + headFirstJava.getFullName());
         headFirstJava.setYearPublishing(2012);
@@ -12,8 +11,8 @@ public class Main {
 
         System.out.println();
 
-        Author schildt = new Author("Herbert", "Schildt");
-        Book javaBeginnerGuide = new Book("java. Beginner Guide", schildt, 2020);
+        Author schildt = new Author(hashCode, "Herbert", "Schildt");
+        Book javaBeginnerGuide = new Book("java. Beginner Guide", schildt, hashCode, 2020);
         System.out.println("Название: " + javaBeginnerGuide.getName());
         System.out.println("Автор: " + javaBeginnerGuide.getFullName());
         System.out.println("Год: " + javaBeginnerGuide.getYearPublishing());
