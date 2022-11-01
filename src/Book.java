@@ -3,17 +3,17 @@ import java.util.Objects;
 public class Book {
 
     private String name;
-    private String authorName;
+    private Author fullName;
     private int yearPublishing;
-    public Book(String name, Author authorName, int yearPublishing) {
+    public Book(String name, Author fullNameName, int yearPublishing) {
         this.name = name;
         this.yearPublishing = yearPublishing;
-        this.authorName = String.valueOf((authorName));
+        this.fullName = fullName;
     }
-    public String getName() {return name;}
+    public String getName() {return this.name;}
     public void setName(String name) {this.name = name;}
-    public String getAuthorName() {return authorName;}
-    public void setAuthorName(String authorName) {this.authorName = authorName;}
+    public Author getFullName() {return fullName;}
+    public void setFullName(Author fullName) {this.fullName = fullName;}
     public int getYearPublishing() {return yearPublishing;}
     public void setYearPublishing(int yearPublishing) {this.yearPublishing = yearPublishing;}
 
@@ -27,8 +27,8 @@ public class Book {
 
         Book guest = (Book) obj;
         return yearPublishing == guest.yearPublishing
-                && (authorName == guest.authorName
-                || (authorName != null &&authorName.equals(guest.getAuthorName())))
+                && (fullName == guest.fullName
+                || (fullName != null &&fullName.equals(guest.getFullName())))
                 && (Objects.equals(name, guest.name)
                 || (name != null && name .equals(guest.name())
         ));

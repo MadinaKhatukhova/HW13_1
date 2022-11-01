@@ -6,7 +6,7 @@ public class Main {
         Author sierra = new Author("Kathy","Sierra");
         Book headFirstJava = new Book("Head First Java", sierra, 2010);
         System.out.println("Название: " + headFirstJava.getName());
-        System.out.println("Автор: " + headFirstJava.getAuthorName());
+        System.out.println("Автор: " + headFirstJava.getFullName());
         headFirstJava.setYearPublishing(2012);
         System.out.println("Год: " + headFirstJava.getYearPublishing());
 
@@ -15,7 +15,7 @@ public class Main {
         Author schildt = new Author("Herbert", "Schildt");
         Book javaBeginnerGuide = new Book("java. Beginner Guide", schildt, 2020);
         System.out.println("Название: " + javaBeginnerGuide.getName());
-        System.out.println("Автор: " + javaBeginnerGuide.getAuthorName());
+        System.out.println("Автор: " + javaBeginnerGuide.getFullName());
         System.out.println("Год: " + javaBeginnerGuide.getYearPublishing());
 
         System.out.println(sierra);
