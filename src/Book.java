@@ -39,8 +39,6 @@ public class Book {
     private String name() {
         return null;
     }
-
-
     @Override
     public int hashCode() {
         return Objects.hash(hashCode, name, fullName, yearPublishing);
