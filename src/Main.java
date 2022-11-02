@@ -2,7 +2,8 @@ import java.io.UnsupportedEncodingException;
 
 public class Main {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        Author sierra = new Author(hashCode, "Kathy","Sierra");
+        boolean hashCode = false;
+        Author sierra = new Author(hashCode,"Kathy","Sierra");
         Book headFirstJava = new Book("Head First Java", sierra, hashCode, 2010);
         System.out.println("Название: " + headFirstJava.getName());
         System.out.println("Автор: " + headFirstJava.getFullName());

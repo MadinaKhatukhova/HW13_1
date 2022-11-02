@@ -38,13 +38,13 @@ public class Book {
 
     private String name() {
         return null;
-
     }
 
-    public Book(boolean hashCode) {
-        this.hashCode = hashCode;
 
-
-}}
+    @Override
+    public int hashCode() {
+        return Objects.hash(hashCode, name, fullName, yearPublishing);
+    }
+}
 
 

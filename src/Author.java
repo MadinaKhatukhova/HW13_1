@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
 
     private final boolean hashCode;
@@ -31,10 +33,10 @@ public class Author {
                 || (lastName != null && lastName .equals(guest.getLastName())
         ));
     }
-    public Author(boolean hashCode) {
-        this.hashCode = hashCode;
-    }
-    private void lastName() {
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(hashCode, firstName, lastName, fullName);
     }
 
 }
