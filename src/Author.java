@@ -39,4 +39,13 @@ public class Author {
         return Objects.hash(hashCode, firstName, lastName, fullName);
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "hashCode=" + hashCode +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", fullName='" + fullName + '\'' +
+                '}';
+    }
 }

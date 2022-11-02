@@ -1,6 +1,11 @@
 import java.io.UnsupportedEncodingException;
 
 public class Main {
+    @Override
+    public String toString() {
+        return "Main{}";
+    }
+
     public static void main(String[] args) throws UnsupportedEncodingException {
         boolean hashCode = false;
         Author sierra = new Author(hashCode,"Kathy","Sierra");
